@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_inactive"
+    android:orientation="vertical"
+    tools:context=".fragment.ScreenSlidePageFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_container">
+
+            <androidx.appcompat.widget.Toolbar
+                android:fitsSystemWindows="true"
+                android:background="@android:color/transparent"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                >
+
+                <com.nightonke.boommenu.BoomMenuButton
+                    android:layout_gravity="end"
+                    android:id="@+id/toolbar_bmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:bmb_backgroundEffect="false" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </FrameLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--    <TextView-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+<!--        android:id="@+id/screen_slide_title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Blogs"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="30sp"/>-->
+
+    <FrameLayout
+        android:paddingHorizontal="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/blog_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

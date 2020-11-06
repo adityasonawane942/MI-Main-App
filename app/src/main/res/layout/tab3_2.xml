@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.ScreenSlidePageFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_container">
+
+            <androidx.appcompat.widget.Toolbar
+                android:fitsSystemWindows="true"
+                android:background="@android:color/transparent"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                >
+
+                <com.nightonke.boommenu.BoomMenuButton
+                    android:layout_gravity="end"
+                    android:id="@+id/toolbar_bmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:bmb_backgroundEffect="false" />
+
+                <ImageButton
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_search"
+                    android:layout_gravity="end"
+                    android:id="@+id/toolbar_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.ferfalk.simplesearchview.SimpleSearchView
+                app:type="bar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:searchBackground="@color/grey"/>
+
+        </FrameLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:fitsSystemWindows="true"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabs"
+            app:tabMode="scrollable"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/events_pager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

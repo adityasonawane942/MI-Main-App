@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MI main app</string>
+
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_leaderboard">Leaderboard</string>
+    <string name="menu_store">Store</string>
+    <string name="menu_profile">Profile</string>
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="notification">Notify</string>
+    <string name="likes">Favs</string>
+    <string name="happy">Happy</string>
+    <string name="room">Room</string>
+    <string name="restaurant">Food</string>
+    <string name="shop">Shop</string>
+    <string name="photos">Pics</string>
+    <string name="call">Call</string>
+</resources>
